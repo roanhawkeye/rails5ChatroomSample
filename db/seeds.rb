@@ -6,3 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 rooms = Room.create([{name: 'Hang Out'}, {name: 'Chill Out'}])
+users = User.create([
+  {name: 'Jane', email: 'jane@test.com', password: 'jane'},
+  {name: 'Jon', email: 'jon@test.com', password: 'jon'}
+  ])

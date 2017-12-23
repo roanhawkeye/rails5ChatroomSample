@@ -1,16 +1,20 @@
-<%= render "shared/nav" %>
-<div id="chat-container">
-    <header>Chill Out Room</header>
-    <div id="chat-box">
-      <div class="row">
-        <p>This is a message samble</p>
-        <span>--Author</span>
+<div class="container">
+  <%= render "shared/nav" %>
+  <div id="chat-container">
+      <header>Chill Out Room</header>
+      <div id="chat-box">
+        <% @messages.each do |msg|%>
+          <div class="row">
+            <p><%= msg.content %></p>
+            <span>--<%= msg.user.name %></span>
+          </div>
+        <% end %>
       </div>
-    </div>
-    <div id="form-box">
-      <%= form_for :message do |f| %>
-        <%= f.text_field :content , id: 'message_input' %>
-        <%= f.submit 'Send Message' %>
-      <% end %>
-    </div>
-  </div>   
+      <div id="form-box">
+        <%= form_for :message, url: messages_path do |f| %>
+          <%= f.text_field :content , id: 'message_input' %>
+          <%= f.submit 'Send Message' %>
+        <% end %>
+      </div>
+    </div>   
+</div>
