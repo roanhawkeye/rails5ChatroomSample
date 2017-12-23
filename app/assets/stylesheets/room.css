@@ -3,8 +3,22 @@
   margin: auto;
 }
 
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right
+}
+
+nav {
+  width: 100%;
+  overflow: auto;
+}
+
 #chat-container {
-  border: 2px blue #f3f3f3;
+  border: 2px blue solid;
+  background-color: #f3f3f3;
 }
 
 #container header{
