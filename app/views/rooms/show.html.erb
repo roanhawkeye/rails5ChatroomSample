@@ -1,7 +1,7 @@
 <div class="container">
   <%= render "shared/nav" %>
   <div id="chat-container">
-      <header>Chill Out Room</header>
+      <header><%= current_room.name %> </header>
       <div id="chat-box">
         <% @messages.each do |msg|%>
           <div class="row">
